@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Rafael Orozco</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Incluir la biblioteca Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+ 
+
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="index.html">Rafa</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    
+                    <li><a href="index.html" onclick="seleccionar()"><-- Back</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    </section>
+
+    <!-- SECCION ABOUT ME -->
+    <section id="aboutme" class="aboutme-new">
+        <div class="contenido-seccion">
+            <div class="image-container">
+                <img src="img/nodo1.png" alt="Imagen Descriptiva">
+            </div>
+            <div class="text-container">
+                <h2>About PyRADTEMCam 1.0</h2>
+                <p><span>The problem...</span>  Thermography, using specialized cameras to capture infrared radiation, 
+                    offers a non-contact way of measuring temperatures, crucial in fields such as agriculture and plant eco-physiology. 
+                    By assessing plant temperature, their level of water stress or crop evapotranspiration can be determined, avoiding tedious and limited methods. 
+                    The use of thermal cameras mounted on drones allows for efficient irrigation analysis, but precision is required as fluctuations during flight 
+                    and calibration variations can affect measurement accuracy. This study focused on investigating and correcting these errors,
+                    proposing methods to mitigate microbolometer drift, establishing temperature references, and developing algorithms to adjust thermal images,
+                    with the ultimate goal of applying these corrections in the agronomic field.</p>
+
+                <p><span>In the project...</span> four continuous temperature sensors were constructed, operating with <span>LoRaWAN radio communication</span> 
+                    and equipped with geopositioning capabilities. A structure was designed to mount these sensors and the controller for transportation during flights. 
+                    Additionally, four panels of different colors were constructed to obtain the temperature of specific objects stable during flight, enabling the 
+                    subsequent correction of images by designing a radiometric calibration model. This model takes into account the atmospheric effect on the drone's
+                    thermal camera and the behavior of the drone's own camera. Since these are uncooled thermal sensors, they exhibit temperature fluctuations, which 
+                    influence the values of the captured images.</p>
+                
+                <p><span>Finaly,</span> a calibration model was developed that reduced the temperature <span>error from 6 degrees</span> between the temperature
+                    sensors and the pixel values of the panels in the image <span>to less than 0.5 degrees</span>, making it feasible to start working with physical models using 
+                    this type of cameras. This achievement represents a groundbreaking advancement, laying the foundation for new endeavors in thermography, 
+                    agriculture, and drones, which had never been accomplished before.</p>
+            </div>
+               
+        </div>
+    </section>
+    <!-- Carrusel de imágenes -->
+    <section id="image-carousel" class="image-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/telas.gif" alt="Image 1">
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+     <!-- Incluir la biblioteca jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- Incluir la biblioteca Slick Carousel JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+ 
+
+</body>
+</html>

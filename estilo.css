@@ -897,3 +897,64 @@ a:link {
   }
 
 
+/* Estilos para el carrusel de imágenes */
+.image-carousel {
+    background-color: #252A2E;
+    padding: 50px 0;
+}
+
+.carousel-container {
+    width: 30%; /* Ancho del contenedor del carrusel */
+    margin: 0 auto; /* Centrar el carrusel */
+}
+
+.carousel-slide img {
+    width: 100%; /* Ajustar las imágenes al ancho del contenedor */
+}
+
+/* Nuevo estilo para la sección About Me */
+.aboutme-new {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.aboutme-new .contenido-seccion {
+    max-width: 1500px;
+    margin: auto;
+    display: flex; /* Utilizar flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    
+}
+
+.aboutme-new .contenido-seccion .image-container {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.aboutme-new .contenido-seccion .text-container {
+    flex: 2;
+}
+
+.aboutme-new h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.aboutme-new .contenido-seccion p {
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.aboutme-new .contenido-seccion p span {
+    color: #1CB698;
+    font-weight: bold;
+}
+
+.saber-mas {
+    font-size: 20px; /* Aumentar el tamaño de la fuente */
+    margin-top: 10px; /* Agregar margen superior */
+}
