@@ -1,7 +1,8 @@
 <?php
 
+// Incluir la clase PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\STMP;
 use PHPMailer\PHPMailer\Exception;
 
 require 'PHPMailer/Exception.php';
@@ -9,39 +10,31 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["nombre"];
-    $phone = $_POST["telefono"];
-    $email = $_POST["email"];
-    $issue = $_POST["asunto"];
-    $message = $_POST["mensaje"];
+    // Recopilar los datos del formulario
+    $nombre = $_POST['nombre'];
+    $telefono = $_POST['telefono'];
+    $email = $_POST['email'];
+    $asunto = $_POST['asunto'];
+    $mensaje = $_POST['mensaje'];
 
-    $mail = new PHPMailer(true);
+    // Destinatario del correo
+    $destinatario = "rafozco@gmail.com"; // Cambia esto con tu dirección de correo electrónico
 
-    try {
-        //Server settings
-        $mail->SMTPDebug = 0;                      //Enable verbose debug output
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                    //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'rafozco@gmail.com';                     //SMTP username
-        $mail->Password   = '1pericles';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-        $mail->Port       = 587;                                    //TCP port to connect to
+    // Contenido del correo
+    $contenido = "Nombre: $nombre\n";
+    $contenido .= "Teléfono: $telefono\n";
+    $contenido .= "Correo electrónico: $email\n\n";
+    $contenido .= "Mensaje:\n$mensaje\n";
 
-        //Recipients
-        $mail->setFrom('rafozco@gmail.com', 'Tu nombre');
-        $mail->addAddress('rafozco@example.com');     //Añade aquí tu dirección de correo electrónico
+    // Cabeceras del correo
+    $cabeceras = "From: $nombre <$email>";
 
-        //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = $issue;
-        $mail->Body    = "Nombre: $name <br> Teléfono: $phone <br> Email: $email <br> Mensaje: $message";
-
-        $mail->send();
-        header("Location: contacto-confirmacion.html");
-        exit;
-    } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    // Enviar el correo electrónico
+    if (mail($destinatario, $asunto, $contenido, $cabeceras)) {
+        echo "<script>alert('Tu mensaje se ha enviado correctamente. ¡Gracias por ponerte en contacto con nosotros!');</script>";
+    } else {
+        echo "<script>alert('Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');</script>";
     }
 }
+
 ?>

@@ -756,7 +756,7 @@ html{
     top: 40%;
     background-color: #252A2E;
     padding: 20px;
-    max-swidth: 350px;
+    max-width: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -896,44 +896,37 @@ a:link {
     text-decoration: underline;
   }
 
-
-/* Estilos para el carrusel de imágenes */
-.image-carousel {
-    background-color: #252A2E;
-    padding: 50px 0;
-}
-
-.carousel-container {
-    width: 30%; /* Ancho del contenedor del carrusel */
-    margin: 0 auto; /* Centrar el carrusel */
-}
-
-.carousel-slide img {
-    width: 100%; /* Ajustar las imágenes al ancho del contenedor */
-}
-
-/* Nuevo estilo para la sección About Me */
+/* Estilos para la sección About Me */
 .aboutme-new {
     background-color: #1e2326;
     color: #fff;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Ajuste de relleno para dispositivos móviles */
+    margin-top: 20px; /* Margen superior */
 }
 
 .aboutme-new .contenido-seccion {
-    max-width: 1500px;
+    max-width: 1000px;
     margin: auto;
-    display: flex; /* Utilizar flexbox */
-    align-items: center; /* Centrar verticalmente los elementos */
-    
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en dispositivos móviles */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
 }
 
 .aboutme-new .contenido-seccion .image-container {
-    flex: 1;
-    margin-right: 5px;
+    flex-basis: calc(50% - 10px); /* Ancho del 50% con margen entre elementos */
+    margin-bottom: 20px; /* Espacio entre elementos */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.aboutme-new .contenido-seccion .image-container img {
+    max-width: 100%; /* Asegurar que la imagen no exceda su contenedor */
 }
 
 .aboutme-new .contenido-seccion .text-container {
-    flex: 2;
+    flex-basis: calc(50% - 10px); /* Ancho del 50% con margen entre elementos */
+    margin-bottom: 20px; /* Espacio entre elementos */
 }
 
 .aboutme-new h2 {
@@ -944,7 +937,7 @@ a:link {
 }
 
 .aboutme-new .contenido-seccion p {
-    font: 18px;
+    font-size: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
@@ -953,8 +946,51 @@ a:link {
     color: #1CB698;
     font-weight: bold;
 }
+.aboutme-new .contenido-seccion .aboutme-image {
+    max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+}
 
-.saber-mas {
-    font-size: 20px; /* Aumentar el tamaño de la fuente */
-    margin-top: 10px; /* Agregar margen superior */
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .aboutme-new .contenido-seccion .image-container,
+    .aboutme-new .contenido-seccion .text-container {
+        flex-basis: 100%; /* Ancho del 100% en dispositivos móviles */
+        
+    }
+}
+
+/* Estilos para la sección GIF */
+.section-gif {
+    background-color: #252A2E;
+    padding: 50px 0;
+}
+
+.section-gif .carousel-container {
+    background-color: #252A2E;
+    width: 50%; /* Ancho del contenedor del carrusel */
+    margin: 0 auto; /* Centrar el carrusel */
+    border-radius: 15px; /* Redondear las esquinas del contenedor */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+}
+
+.section-gif .carousel-slide img {
+    width: 100%; /* Ajustar las imágenes al ancho del contenedor */
+    border-radius: 15px; /* Redondear las esquinas de la imagen */
+}
+@media (max-width: 768px) {
+    .section-gif .carousel-container {
+        width: calc(100% - 20px); /* Ancho del contenedor del carrusel - margen izquierdo y derecho */
+        margin-left: auto; /* Establecer margen izquierdo automático */
+        margin-right: auto; /* Establecer margen derecho automático */
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+    }
+    .section-gif .carousel-slide img {
+        width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+    }
+    .aboutme-new .contenido-seccion .image-container img {
+        max-width: 50%; /* Reducir el tamaño de la imagen nodo2.jpg en dispositivos móviles */
+    }
 }
