@@ -483,8 +483,9 @@ html{
 }
 .card-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en líneas nuevas */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
   }
   
   .card {
@@ -492,10 +493,23 @@ html{
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: calc(33.333% - 20px); /* Tres tarjetas por fila, menos el espacio de gap */
     overflow: hidden;
     text-align: left;
     transition: box-shadow 0.3s ease;
+  }
+  /* Ajusta las tarjetas en pantallas medianas */
+    @media (max-width: 992px) {
+    .card {
+      width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas medianas */
+    }
+  }
+  
+  /* Ajusta las tarjetas en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .card {
+      width: calc(100% - 20px); /* Una tarjeta por fila en pantallas pequeñas */
+    }
   }
   
   .card:hover {
