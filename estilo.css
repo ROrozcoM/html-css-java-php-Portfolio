@@ -578,11 +578,125 @@ html{
     color: #fff;
   }
   
+
+/* SECCION development */
+.development{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.development .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.development h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en líneas nuevas */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+  }
+  
+  .card {
+    background: rgb(124, 120, 120);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Tres tarjetas por fila, menos el espacio de gap */
+    overflow: hidden;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+  }
+  /* Ajusta las tarjetas en pantallas medianas */
+    @media (max-width: 992px) {
+    .card {
+      width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas medianas */
+    }
+  }
+  
+  /* Ajusta las tarjetas en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .card {
+      width: calc(100% - 20px); /* Una tarjeta por fila en pantallas pequeñas */
+    }
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .card-header h3 {
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .badge_on {
+    background-color: #69ff82;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .badge_ring {
+    background-color: #69fff8;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  
+  .card-content p {
+    color: rgb(255, 255, 255);
+    font-size: 0.9em;
+    margin-bottom: 16px;
+  }
+  
+  .card-button {
+    display: inline-block;
+    background-color: rgba(24, 150, 133, 0.61);
+    color: #fff;
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .card-button:hover {
+    background-color: rgba(24, 150, 133, 0.61);
+    color: #fff;
+  }
+  
   
 
 /* SECCION PREMIOS */
 .premios {
-    background-color: #1e2326;
+    background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
   }
