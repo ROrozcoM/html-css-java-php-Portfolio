@@ -106,108 +106,7 @@ html{
 .inicio .contenido-banner .redes a:hover{
     background-color: #1CB698;
 }
-.aboutme{
-    background-color: #1e2326;
-    color: #fff;
-    padding: 50px 20px;
-}
-.aboutme .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.aboutme h2{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
 
-}
-.aboutme .contenido-seccion p{
-    font: 18px;
-    line-height: 22px;
-    margin-bottom: 20px;
-}
-.aboutme .contenido-seccion p span{
-    color: #1CB698;
-    font-weight: bold;
-}
-.aboutme .fila{
-    display: flex;
-}
-.aboutme .fila .col
-{
-    width: 50%;
-}
-.aboutme .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
-}
-.aboutme .fila .col ul{
-    list-style: none;
-}
-.aboutme .fila .col ul li{
-    margin: 12px 0;
-}
-.aboutme .fila .col ul li strong{
-    display: inline-block;
-    color: #1CB698;
-    width: 130px;
-}
-.aboutme .fila .col ul li span{
-    background-color: #1CB698;
-    padding: 3px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-.aboutme .fila .col .contenedor-intereses{
-    display: flex;
-    flex-wrap: wrap;
-}
-.aboutme .fila .col .contenedor-intereses .interes{
-    width: 100px;
-    height: 100px;
-    background-color: #252A2E;
-    border-radius: 10px;
-    margin: 0 15px 15px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-}.aboutme .fila .col .contenedor-intereses .interes:hover{
-    background-color: #1CB698;
-}
-.aboutme .fila .col .contenedor-intereses .interes i{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-.aboutme button{
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    width: fit-content;
-    display: block;
-    margin: 20px auto;
-    padding: 10px 22px;
-    font-size: 16px;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-.aboutme button .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #1CB698;
-    z-index: -1;
-    transition: 1s;
-}
-.aboutme button:hover .overlay{
-    width: 100%;
-}
 /* SECCION S K I L L S */
 .skills{
     background-color: #252A2E;
@@ -275,7 +174,7 @@ html{
 }
 @keyframes python {
     0%{width: 0%;}
-    100%{width: 75%;}
+    100%{width: 90%;}
 }
 
 .skills .skill .htmlcss{
@@ -302,7 +201,7 @@ html{
 }
 @keyframes imageanalysis {
     0%{width: 0%;}
-    100%{width: 81%;}
+    100%{width: 80%;}
 }
 
 .skills .skill .enginecode{
@@ -311,7 +210,7 @@ html{
 }
 @keyframes enginecode {
     0%{width: 0%;}
-    100%{width: 55%;}
+    100%{width: 85%;}
 }
 
 .skills .skill .comunicacion{
@@ -338,7 +237,7 @@ html{
 }
 @keyframes creatividad {
     0%{width: 0%;}
-    100%{width: 99%;}
+    100%{width: 70%;}
 }
 
 .skills .skill .dedicacion{
@@ -347,7 +246,7 @@ html{
 }
 @keyframes dedicacion {
     0%{width: 0%;}
-    100%{width: 70%;}
+    100%{width: 90%;}
 }
 
 .skills .skill .proyect{
@@ -356,8 +255,54 @@ html{
 }
 @keyframes proyect {
     0%{width: 0%;}
-    100%{width: 94%;}
+    100%{width: 80%;}
 }
+
+.skills .skill {
+    display: flex; /* Usar flexbox para alinear el ícono y el texto */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 20px; /* Espaciado entre habilidades */
+}
+
+.skills .skill i {
+    font-size: 24px; /* Ajusta el tamaño del ícono */
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    color: inherit; /* Hereda el color del texto, manteniendo su color original */
+}
+
+.skills .barra-skill {
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-left: 10px; /* Espaciado entre el texto y la barra */
+    flex-grow: 1; /* Permite que la barra tome el espacio restante */
+}
+
+.skills .skill .progreso {
+    background-color: #1CB698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    z-index: 1; /* Asegura que la barra de progreso esté por encima */
+}
+
+.skills .skill .barra-skill span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1CB698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+    z-index: 2; /* Asegura que el porcentaje esté por encima */
+}
+
+
 /* SECCION background */
 .background{
     background-color: #1e2326;
@@ -464,6 +409,7 @@ html{
     position: relative;
     bottom: 4px;
 }
+
 
 /* SECCION PROYECTOS */
 .proyectos{
@@ -826,62 +772,80 @@ html{
   
 
 /* SECCION PORTFOLIO */
-.portfolio{
-    background-color: #252A2E;
-    color: #fff;
+.portfolio {
+    background-color: #1e2326;
     padding: 50px 20px;
+    color: #fff;
+    text-align: center;
 }
-.portfolio .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.portfolio h2{
+
+.portfolio h2 {
     font-size: 48px;
     font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
-}
-.portfolio .galeria{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.portfolio .galeria .proyecto{
-    position: relative;
-    max-width: 340px;
-    height: fit-content;
-    margin: 10px;
-    cursor: pointer;
-}
-.portfolio .galeria .proyecto img{
-    width: 100%;
-    display: block;
-}
-.portfolio .galeria .proyecto .overlay{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-    font-size: 18px;
-    letter-spacing: 3px;
-    opacity: 0;
-}
-.portfolio .galeria .proyecto .overlay h3{
     margin-bottom: 20px;
-    transition: 1s;
 }
-.portfolio .galeria .proyecto .overlay:hover{
-    opacity: 1;
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid adaptable */
+    gap: 15px; /* Espacio entre los items */
 }
-.portfolio .galeria .proyecto .overlay:hover h3{
-    margin-bottom: 0px;
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Overlay con detalles */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28, 182, 152, 0.8);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.overlay p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 600px) {
+    .grid-gallery {
+        grid-template-columns: 1fr; /* Se ajusta a una columna en pantallas pequeñas */
+    }
+}
+
+
+
 
 
 
@@ -1192,3 +1156,142 @@ a:link {
         max-width: 50%; /* Reducir el tamaño de la imagen nodo2.jpg en dispositivos móviles */
     }
 }
+
+@media (max-width: 768px) {
+    .aboutme .fila {
+        flex-direction: column; /* Apilar las columnas en una fila vertical */
+    }
+    .aboutme .fila .col {
+        width: 100%; /* Cada columna ocupará el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden; /* Previene el desplazamiento horizontal no deseado */
+}
+
+.contenedor-header header {
+    width: 100%; /* Cambiar de max-width a width */
+}
+
+
+
+/* General Styles SECCION NUEVA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #1c1c20;
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.services-section h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Card Styles */
+.service-card {
+    position: relative;
+    background-color: #1C1C1C;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    font-size: 40px;
+    color: #1CB698;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.circle-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #1CB698;
+    border-radius: 50%;
+    color: #1CB698;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.circle-btn:hover {
+    background-color: #1CB698;
+    color: #121212;
+}
+
+/* Corner Decorators */
+.corner-decorator {
+    position: absolute;
+    border: 4px solid #1CB698;
+}
+
+.top-left {
+    top: -10px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
+    border-width: 4px 0 0 4px;
+}
+
+.bottom-right {
+    bottom: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    border-width: 0 4px 4px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+

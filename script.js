@@ -49,3 +49,18 @@ $(document).ready(function(){
         dots: true // Mostrar los puntos de navegación
     });
 });
+
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
+
+    // Actualizar el índice del slide actual
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+    // Mover el contenedor a la posición correcta
+    const carouselInner = document.querySelector('.carousel-inner');
+    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
