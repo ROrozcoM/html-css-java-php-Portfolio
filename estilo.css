@@ -126,6 +126,7 @@ html{
 }
 .skills .fila{
     display: flex;
+
 }
 .skills .fila .col{
     width: 50%;
@@ -868,6 +869,8 @@ html{
 }
 .contacto .fila{
     display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente si hay altura definida */
 }
 .contacto .col{
     width: 50%;
