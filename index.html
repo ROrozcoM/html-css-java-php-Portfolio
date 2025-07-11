@@ -31,7 +31,7 @@
                     <li><a href="#services" onclick="seleccionar()">PROJECTS</a></li>
                     <li><a href="ownprojects.html" onclick="seleccionar()">DEVELOPMENT</a></li>
                     <li><a href="awards.html" onclick="seleccionar()">AWARDS</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">GALLERY</a></li>
+                    <li><a href="publications.html" onclick="seleccionar()">PUBLICATIONS</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
                 </ul>
             </nav>
@@ -531,49 +531,44 @@
 
 
 
-    
+<!-- CONTACTO -->
 
-    <!-- SECCION CONTACTO -->
 <section id="contacto" class="contacto">
-    <div class="contenido-seccion">
-        <h2>CONTACT</h2>
-        <div class="fila">
-            <!-- Formulario 
-            <div class="col">
-                <form method="post" action="contacto.php">
-                    <input type="text" name="nombre" placeholder="Your name">
-                    <input type="text" name="telefono" placeholder="Phone Number">
-                    <input type="text" name="email" placeholder="E-mail">
-                    <input type="text" name="asunto" placeholder="Issue">
-                    <textarea name="mensaje" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button type="submit" name="submit">
-                        Send Message <i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </form>
-            </div>-->
-            <!-- Mapa -->
-            <div class="col">
-                <img src="img/ubicacion.png" alt="">
-                <div class="info">
-                    <ul>
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            Córdoba, Spain
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-mobile-screen"></i>
-                            Tlf - 676374405 
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            Email: rafozco@gmail.com
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <div class="contenido-seccion">
+    <h2>CONTACT</h2>
+    <div class="fila">
+      <!-- Formulario -->
+      <div class="col">
+        <form id="formulario" action="https://formspree.io/f/mblynzlo" method="POST">
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <textarea name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+
+          <!-- Honeypot -->
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <button type="submit" class="boton-enviar">Enviar mensaje</button>
+        </form>
+
+        <!-- Mensaje de éxito -->
+        <div id="form-mensaje" style="display:none; margin-top:1rem; color:green; font-weight:bold;">
+          ¡Tu mensaje ha sido enviado con éxito! Te responderemos pronto.
         </div>
+      </div>
+
+      <!-- Mapa e info -->
+      <div class="col">
+        <img src="img/ubicacion.png" alt="Ubicación" />
+        <div class="info">
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> Córdoba, España</li>
+            <li><i class="fa-solid fa-mobile-screen"></i> Tlf - 676374405</li>
+            <li><i class="fa-solid fa-envelope"></i> Email: rafozco@gmail.com</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 

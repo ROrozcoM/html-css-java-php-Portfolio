@@ -64,3 +64,29 @@ function moveSlide(direction) {
     const carouselInner = document.querySelector('.carousel-inner');
     carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
+
+
+
+  const formulario = document.getElementById("formulario");
+  const mensaje = document.getElementById("form-mensaje");
+
+  formulario.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const data = new FormData(formulario);
+
+    const res = await fetch(formulario.action, {
+      method: formulario.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (res.ok) {
+      formulario.reset();
+      mensaje.style.display = "block";
+    } else {
+      alert("Hubo un error. Intenta nuevamente más tarde.");
+    }
+  });

@@ -850,92 +850,142 @@ html{
 
 
 
-/* SECCION CONTACTO */
-.contacto{
-    background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
-    padding: 50px 0;
+/* CONTACT SECTION */
+.contacto {
+  background-image: url(img/contact_bg.png);
+  background-color: #1e2326;
+  color: #fff;
+  padding: 50px 0;
 }
-.contacto .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
+
+.contacto .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
 }
-.contacto h2{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
+
+.contacto h2 {
+  font-size: 48px;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  padding: 20px 0;
 }
-.contacto .fila{
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente si hay altura definida */
+
+.contacto .fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.contacto .col{
-    width: 50%;
-    padding: 10px;
-    position: relative;
+
+.contacto .col {
+  flex: 1 1 45%;
+  position: relative;
 }
-.contacto .col input, .contacto .col textarea{
-    display: block;
+
+.contacto .col input,
+.contacto .col textarea {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #252A2E;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contacto .boton-enviar {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  z-index: 10;
+}
+
+.contacto .boton-enviar .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1CB698;
+  z-index: -1;
+  transition: width 1s;
+}
+
+.contacto .boton-enviar:hover .overlay {
+  width: 100%;
+}
+
+.contacto .col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contacto .info {
+  background-color: #252A2E;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contacto .info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacto .info ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contacto .info ul li i {
+  color: #1CB698;
+  margin-right: 15px;
+}
+
+/* Mensaje de éxito */
+.form-mensaje {
+  display: none;
+  margin-top: 1rem;
+  color: #1CB698;
+  font-weight: bold;
+  text-align: center;
+}
+
+.boton-enviar {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #1CB698;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.boton-enviar:hover {
+  background-color: #16a085;
+}
+
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .contacto .fila {
+    flex-direction: column;
+  }
+  .contacto .col {
     width: 100%;
-    padding: 18px;
-    border: none;
-    margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
-    font-size: 18px;
+  }
 }
-.contacto button{
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    width: fit-content;
-    display: block;
-    margin: 20px auto;
-    padding: 10px 22px;
-    font-size: 16px;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-.contacto button .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #1CB698;
-    z-index: -1;
-    transition: 1s;
-}
-.contacto button:hover .overlay{
-    width: 100%;
-}
-.contacto .col img{
-    width: 100%;
-}
-.contacto .col .info{
-    position: absolute;
-    top: 40%;
-    background-color: #252A2E;
-    padding: 20px;
-    max-width: 350px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.contacto .col .info ul{
-    list-style: none;
-}
-.contacto .col .info ul li{
-    margin-bottom: 20px;
-}
-.contacto .col .info ul li i{
-    color: #1CB698;
-    display: inline-block;
-    margin-right: 20px;
-}
+
 footer{
     background-color: #252A2E;
     color: #fff;
