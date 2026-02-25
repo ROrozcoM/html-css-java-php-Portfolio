@@ -1,109 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZVRWG83ZDM');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Rafael Orozco</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Incluir la biblioteca Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
- 
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZVRWG83ZDM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rafael Orozco — PyRADTEMCam: radiometric calibration of thermal IR cameras on UAVs.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>PyRADTEMCam — Rafael Orozco</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="index.html">Rafa</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    
-                    <li><a href="index.html" onclick="seleccionar()"><-- Back</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
+
+<!-- NAV -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Rafa</a>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="index.html#skills"      data-i18n="nav.skills">Skills</a></li>
+        <li><a href="index.html#background"  data-i18n="nav.background">Background</a></li>
+        <li><a href="index.html#projects"    data-i18n="nav.projects">Projects</a></li>
+        <li><a href="ownprojects.html" class="active" data-i18n="nav.development">Development</a></li>
+        <li><a href="awards.html"             data-i18n="nav.awards">Awards</a></li>
+        <li><a href="publications.html"       data-i18n="nav.publications">Publications</a></li>
+        <li><a href="index.html#contact"     data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#skills"     data-i18n="nav.skills">Skills</a>
+  <a href="index.html#background" data-i18n="nav.background">Background</a>
+  <a href="index.html#projects"   data-i18n="nav.projects">Projects</a>
+  <a href="ownprojects.html"       data-i18n="nav.development">Development</a>
+  <a href="awards.html"            data-i18n="nav.awards">Awards</a>
+  <a href="publications.html"      data-i18n="nav.publications">Publications</a>
+  <a href="index.html#contact"    data-i18n="nav.contact">Contact</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="subpage-header">
+  <div class="container">
+    <a href="ownprojects.html" class="subpage-back" data-i18n="thesis.back">← Back to home</a>
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="thesis.eyebrow">Master Thesis</span>
+    </div>
+    <h1 class="subpage-title" data-i18n="thesis.title">PyRADTEMCam 1.0</h1>
+    <p class="subpage-subtitle" data-i18n="thesis.subtitle">Radiometric calibration of thermal infrared cameras on UAVs for agronomic applications.</p>
+    <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+      <span class="tag tag-green"><i class="fa-solid fa-award"></i> Matrícula de Honor · March 2023</span>
+      <span class="tag tag-blue">Python</span>
+      <span class="tag tag-blue">LoRaWAN</span>
+      <span class="tag tag-green">UAV Thermography</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <div class="thesis-section reveal">
+      <h2 class="thesis-section-title">The Problem</h2>
+      <div class="thesis-body">
+        <p>Thermography — using specialized cameras to capture infrared radiation — offers a non-contact way of measuring temperatures, crucial in fields such as agriculture and plant eco-physiology. By assessing plant temperature, their level of water stress or crop evapotranspiration can be determined, avoiding tedious and limited contact methods.</p>
+        <p>The use of thermal cameras mounted on drones enables efficient irrigation analysis at field scale, but <strong>precision is critical</strong>. Fluctuations during flight and calibration drift can introduce errors of up to <strong>6°C</strong> between aerial thermal images and ground truth measurements — making the data practically unusable for fine-grained agronomic decisions.</p>
+      </div>
     </div>
 
-    </section>
+    <div class="thesis-section reveal">
+      <h2 class="thesis-section-title">The Solution</h2>
+      <div class="thesis-body">
+        <p>This thesis developed a complete system to correct radiometric errors in drone-mounted thermal cameras. The approach involved:</p>
+        <p>Four <strong>continuous temperature sensors</strong> were designed and built, operating via <strong>LoRaWAN radio communication</strong> with integrated GPS geopositioning. A mounting structure allowed these sensors to travel alongside the drone during each flight.</p>
+        <p>Additionally, four <strong>calibration panels</strong> of different colors were constructed and placed in the field to provide stable, known-temperature reference objects visible in every thermal image. A radiometric calibration model was developed in Python to account for atmospheric effects, camera drift (microbolometer behavior), and the uncooled sensor's temperature fluctuations during flight.</p>
+      </div>
+    </div>
 
-    <!-- SECCION ABOUT ME -->
-    <section id="aboutme" class="aboutme-new">
-        <div class="contenido-seccion">
-            <div class="image-container">
-                <img src="img/nodo1.png" alt="Imagen Descriptiva" class="aboutme-image">
-            </div>
-            <div class="text-container">
-                <h2>About PyRADTEMCam 1.0</h2>
-                <p><span>The problem...</span>  Thermography, using specialized cameras to capture infrared radiation, 
-                    offers a non-contact way of measuring temperatures, crucial in fields such as agriculture and plant eco-physiology. 
-                    By assessing plant temperature, their level of water stress or crop evapotranspiration can be determined, avoiding tedious and limited methods. 
-                    The use of thermal cameras mounted on drones allows for efficient irrigation analysis, but precision is required as fluctuations during flight 
-                    and calibration variations can affect measurement accuracy. This study focused on investigating and correcting these errors,
-                    proposing methods to mitigate microbolometer drift, establishing temperature references, and developing algorithms to adjust thermal images,
-                    with the ultimate goal of applying these corrections in the agronomic field.</p>
+    <div class="thesis-highlight-box reveal">
+      <i class="fa-solid fa-temperature-arrow-down"></i>
+      <p>The calibration model reduced temperature error from <strong>~6°C to less than 0.5°C</strong> between aerial thermal images and ground sensor measurements — enabling reliable agronomic decisions from UAV thermography for the first time.</p>
+    </div>
 
-                <p><span>In the project...</span> four continuous temperature sensors were constructed, operating with <span>LoRaWAN radio communication</span> 
-                    and equipped with geopositioning capabilities. A structure was designed to mount these sensors and the controller for transportation during flights. 
-                    Additionally, four panels of different colors were constructed to obtain the temperature of specific objects stable during flight, enabling the 
-                    subsequent correction of images by designing a radiometric calibration model. This model takes into account the atmospheric effect on the drone's
-                    thermal camera and the behavior of the drone's own camera. Since these are uncooled thermal sensors, they exhibit temperature fluctuations, which 
-                    influence the values of the captured images.</p>
-                
-                <p><span>Finaly,</span> a calibration model was developed that reduced the temperature <span>error from 6 degrees</span> between the temperature
-                    sensors and the pixel values of the panels in the image <span>to less than 0.5 degrees</span>, making it feasible to start working with physical models using 
-                    this type of cameras. This achievement represents a groundbreaking advancement, laying the foundation for new endeavors in thermography, 
-                    agriculture, and drones, which had never been accomplished before.</p>
-            </div>
-               
-        </div>
-    </section>
-    <!-- Sección GIF -->
-    <section id="section-gif" class="section-gif">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="img/telas.gif" alt="Gif Descriptivo" class="aboutme-gif">
-            </div>
-        </div>
-    </section>
+    <div class="thesis-section reveal" style="margin-top:48px;">
+      <h2 class="thesis-section-title">Impact</h2>
+      <div class="thesis-body">
+        <p>This achievement represents a foundational advance for thermography in precision agriculture. With sub-0.5°C accuracy, it became possible to reliably detect crop water stress from the air — a key input for the precision irrigation models developed in subsequent PhD research.</p>
+        <p>The PyRADTEMCam methodology is now applied operationally in the STIMA2 and Smart Almond research projects for almond irrigation scheduling.</p>
+      </div>
+    </div>
 
-    
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
-        </div>
-    </footer>
+    <img src="img/telas.gif" alt="PyRADTEMCam calibration process" class="thesis-gif reveal">
 
-    <script src="script.js"></script>
-     <!-- Incluir la biblioteca jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- Incluir la biblioteca Slick Carousel JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
- 
+    <div style="margin-top:36px;" class="reveal">
+      <img src="img/nodo1.png" alt="LoRaWAN sensor node" style="width:100%;border-radius:var(--r-lg);border:1px solid var(--b1);">
+    </div>
 
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Rafa</span>
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Rafael Orozco Morán · Built with ♥ in Córdoba</span>
+    <div class="footer-socials">
+      <a href="https://github.com/ROrozcoM" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/rafozco20" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>

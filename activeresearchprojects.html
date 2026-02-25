@@ -1,115 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZVRWG83ZDM');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Rafael Orozco</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Incluir la biblioteca Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
- 
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZVRWG83ZDM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rafael Orozco — Active research projects in precision agriculture.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Research Projects — Rafael Orozco</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="index.html">Rafa</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    
-                    <li><a href="index.html" onclick="seleccionar()"><-- Back</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    </div>
 
-    </section>
-
-     <!-- SECCION PROYECTOS -->
-     <section id="proyectos" class="proyectos">
-      <div class="contenido-seccion">
-        <h2>PROJECTS</h2>
-        <div class="card-container">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://www.uco.es/agronomia/images/1.JPG" alt="Norway">
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3>"PROLIVE" Solutions Project</h3>
-                <span class="badge_on">Active</span>
-              </div>
-              <p>This project focuses on providing practical solutions for olive grove management and understanding its genetics to develop varieties resistant to climate change effects...</p>
-              <a href="https://www.mercacei.com/noticia/60544/actualidad/proyecto-prolive:-innovacion-al-servicio-de-la-mejora-genetica-del-olivar-para-adaptarlo-al-cambio-climatico.html" class="card-button">Learn more</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="img/smartalmond.png" alt="Norway">
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3>"Smart Almond" Op. Team</h3>
-                <span class="badge_on">Active</span>
-              </div>
-              <p>Operational team loking for optimization of almond irrigation using IoT technology, smart weather stations, and remote sensors to enhance water use efficiency and environmental care...</p>
-              <a href="https://smartalmond.es/" class="card-button">Learn more</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="img/iris2.png" alt="Norway">
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3>"IRIS2" Solutions Project</h3>
-                <span class="badge_on">Active</span>
-              </div>
-              <p>This project focuses on providing practical solutions reoptimizing water irrigation on farm. The aim is to create a new revolutionary irrigation controller</p>
-              <a href="" class="card-button">Learn more</a>
-            </div>
-          </div>        
+<!-- NAV -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Rafa</a>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="index.html#skills"      data-i18n="nav.skills">Skills</a></li>
+        <li><a href="index.html#background"  data-i18n="nav.background">Background</a></li>
+        <li><a href="index.html#projects"    data-i18n="nav.projects">Projects</a></li>
+        <li><a href="ownprojects.html"        data-i18n="nav.development">Development</a></li>
+        <li><a href="awards.html"             data-i18n="nav.awards">Awards</a></li>
+        <li><a href="publications.html"       data-i18n="nav.publications">Publications</a></li>
+        <li><a href="index.html#contact"     data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
       </div>
-    </section>
-    
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#skills"     data-i18n="nav.skills">Skills</a>
+  <a href="index.html#background" data-i18n="nav.background">Background</a>
+  <a href="index.html#projects"   data-i18n="nav.projects">Projects</a>
+  <a href="ownprojects.html"       data-i18n="nav.development">Development</a>
+  <a href="awards.html"            data-i18n="nav.awards">Awards</a>
+  <a href="publications.html"      data-i18n="nav.publications">Publications</a>
+  <a href="index.html#contact"    data-i18n="nav.contact">Contact</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="subpage-header">
+  <div class="container">
+    <a href="index.html" class="subpage-back">← Back to home</a>
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">Active Research</span>
+    </div>
+    <h1 class="subpage-title">Current Research Projects</h1>
+    <p class="subpage-subtitle">Ongoing scientific work in precision agriculture, smart irrigation, and agri-tech.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="dev-grid">
+
+      <div class="dev-card reveal">
+        <img src="img/tesis.jpg" alt="PhD Thesis" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-green">Active</span>
+            <span class="tag tag-blue">LiDAR · UAV · IoT</span>
+          </div>
+          <h3 class="dev-title">PhD Thesis — Single Tree Irrigation Management</h3>
+          <p class="dev-desc">Doctoral research on irrigation optimization in fruit trees through detection of individual-tree variability under hydric stress. Combining aerial and terrestrial LiDAR, UAV thermography, and IoT sensor networks.</p>
+          <a href="phdstudies.html" class="btn btn-outline">Learn more →</a>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
-     <!-- Incluir la biblioteca jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- Incluir la biblioteca Slick Carousel JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
- 
+      <div class="dev-card reveal reveal-delay-1">
+        <img src="img/smartalmond.png" alt="Smart Almond" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-green">Active</span>
+            <span class="tag tag-blue">IoT · Remote Sensing</span>
+          </div>
+          <h3 class="dev-title">"Smart Almond" Operational Team</h3>
+          <p class="dev-desc">Operational team focused on the optimization of almond irrigation using IoT technology, smart weather stations, and remote sensors to enhance water use efficiency and environmental care at farm scale.</p>
+          <a href="https://smartalmond.es/" class="btn btn-outline" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
 
+      <div class="dev-card reveal">
+        <img src="img/iris2.png" alt="IRIS2 Project" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-green">Active</span>
+            <span class="tag tag-blue">IoT · Web App</span>
+          </div>
+          <h3 class="dev-title">"IRIS2" Solutions Project</h3>
+          <p class="dev-desc">Developing flexible pumping control systems for optimized, sector-specific irrigation using user-friendly mobile and web applications for optimal irrigation scheduling and resource management.</p>
+          <span class="tag tag-gold" style="margin-top:auto;">In development</span>
+        </div>
+      </div>
+
+      <div class="dev-card reveal reveal-delay-1">
+        <img src="https://www.uco.es/agronomia/images/1.JPG" alt="PROLIVE Project" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-green">Active</span>
+            <span class="tag tag-blue">Genetics · Remote Sensing</span>
+          </div>
+          <h3 class="dev-title">"PROLIVE" Solutions Project</h3>
+          <p class="dev-desc">Project focused on providing practical solutions for olive grove management and understanding its genetics to develop varieties resistant to climate change effects, integrating remote sensing tools for phenotyping.</p>
+          <a href="https://www.mercacei.com/noticia/60544/actualidad/proyecto-prolive:-innovacion-al-servicio-de-la-mejora-genetica-del-olivar-para-adaptarlo-al-cambio-climatico.html" class="btn btn-outline" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Rafa</span>
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Rafael Orozco Morán · Built with ♥ in Córdoba</span>
+    <div class="footer-socials">
+      <a href="https://github.com/ROrozcoM" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/rafozco20" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,106 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZVRWG83ZDM');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Rafael Orozco</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Incluir la biblioteca Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
- 
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZVRWG83ZDM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rafael Orozco — Future research projects in agri-tech.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Future Projects — Rafael Orozco</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="index.html">Rafa</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    
-                    <li><a href="index.html" onclick="seleccionar()"><-- Back</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    </div>
 
-    </section>
-
-     <!-- SECCION PROYECTOS -->
-     <section id="proyectos" class="proyectos">
-      <div class="contenido-seccion">
-        <h2>PROJECTS</h2>
-        <div class="card-container">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png" alt="Norway">
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3>"GoINGNuts" Operat. Team</h3>
-                <span class="badge_ring">ToStart</span>
-              </div>
-              <p>National Operational team loking for optimization of almond producing system, from establishment to irrigation to pests and diseases using teledetection technologies...</p>
-              <a href="" class="card-button">Learn more</a>
-            </div>
-          </div>
-          <div class="card">
-              <div class="card-image">
-                <img src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>"IRIS2" Develop.  Project </h3>
-                  <span class="badge_ring">ToStart</span>
-                </div>
-                <p>Develop flexible pumping control systems for optimized, sector-specific irrigation using user-friendly mobile and web applications for optimal irrigation programming... </p>
-                <a href="" class="card-button">Learn more</a>
-              </div>
-            </div>
-        </div>
-        
-        
-        
+<!-- NAV -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Rafa</a>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="index.html#skills"      data-i18n="nav.skills">Skills</a></li>
+        <li><a href="index.html#background"  data-i18n="nav.background">Background</a></li>
+        <li><a href="index.html#projects"    data-i18n="nav.projects">Projects</a></li>
+        <li><a href="ownprojects.html"        data-i18n="nav.development">Development</a></li>
+        <li><a href="awards.html"             data-i18n="nav.awards">Awards</a></li>
+        <li><a href="publications.html"       data-i18n="nav.publications">Publications</a></li>
+        <li><a href="index.html#contact"     data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
       </div>
-    </section>
-    
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#skills"     data-i18n="nav.skills">Skills</a>
+  <a href="index.html#background" data-i18n="nav.background">Background</a>
+  <a href="index.html#projects"   data-i18n="nav.projects">Projects</a>
+  <a href="ownprojects.html"       data-i18n="nav.development">Development</a>
+  <a href="awards.html"            data-i18n="nav.awards">Awards</a>
+  <a href="publications.html"      data-i18n="nav.publications">Publications</a>
+  <a href="index.html#contact"    data-i18n="nav.contact">Contact</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="subpage-header">
+  <div class="container">
+    <a href="index.html" class="subpage-back">← Back to home</a>
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">Upcoming</span>
+    </div>
+    <h1 class="subpage-title">Future Research Projects</h1>
+    <p class="subpage-subtitle">Upcoming research lines and projects in the agri-tech pipeline.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="dev-grid">
+
+      <div class="dev-card reveal">
+        <div class="dev-img" style="background:var(--bg-3);height:200px;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-seedling" style="font-size:4rem;color:var(--green);opacity:0.4;"></i>
         </div>
-    </footer>
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-gold">To Start</span>
+            <span class="tag tag-blue">Remote Sensing · AI</span>
+          </div>
+          <h3 class="dev-title">"GoINGNuts" Operational Team</h3>
+          <p class="dev-desc">National Operational Team focused on optimization of the almond production system — from establishment to irrigation to pest and disease management — using teledetection technologies and machine learning models.</p>
+          <span class="tag tag-gold" style="margin-top:auto;">Coming soon</span>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
-     <!-- Incluir la biblioteca jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- Incluir la biblioteca Slick Carousel JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
- 
+      <div class="dev-card reveal reveal-delay-1">
+        <div class="dev-img" style="background:var(--bg-3);height:200px;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-droplet" style="font-size:4rem;color:var(--blue);opacity:0.4;"></i>
+        </div>
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-gold">To Start</span>
+            <span class="tag tag-blue">IoT · AI · Mobile</span>
+          </div>
+          <h3 class="dev-title">IrriSimple — Precision Irrigation Platform</h3>
+          <p class="dev-desc">A technology-based spinoff (awarded €20,000 in seed funding) developing AI-powered irrigation consulting services for farmers, using LiDAR-derived canopy models and thermal stress indices as decision-support inputs.</p>
+          <span class="tag tag-gold" style="margin-top:auto;">In preparation</span>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Rafa</span>
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Rafael Orozco Morán · Built with ♥ in Córdoba</span>
+    <div class="footer-socials">
+      <a href="https://github.com/ROrozcoM" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/rafozco20" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
