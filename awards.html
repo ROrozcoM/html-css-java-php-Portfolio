@@ -1,148 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZVRWG83ZDM');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Rafael Orozco</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Incluir la biblioteca Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
- 
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZVRWG83ZDM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rafael Orozco — Awards and recognitions for agri-tech innovation.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Awards — Rafael Orozco</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="index.html">Rafa</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    
-                    <li><a href="index.html" onclick="seleccionar()"><-- Back</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
+
+<!-- NAV -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Rafa</a>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="index.html#skills"      data-i18n="nav.skills">Skills</a></li>
+        <li><a href="index.html#background"  data-i18n="nav.background">Background</a></li>
+        <li><a href="index.html#projects"    data-i18n="nav.projects">Projects</a></li>
+        <li><a href="ownprojects.html"        data-i18n="nav.development">Development</a></li>
+        <li><a href="awards.html" class="active" data-i18n="nav.awards">Awards</a></li>
+        <li><a href="publications.html"       data-i18n="nav.publications">Publications</a></li>
+        <li><a href="index.html#contact"     data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+</nav>
 
-    </section>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#skills"     data-i18n="nav.skills">Skills</a>
+  <a href="index.html#background" data-i18n="nav.background">Background</a>
+  <a href="index.html#projects"   data-i18n="nav.projects">Projects</a>
+  <a href="ownprojects.html"       data-i18n="nav.development">Development</a>
+  <a href="awards.html"            data-i18n="nav.awards">Awards</a>
+  <a href="publications.html"      data-i18n="nav.publications">Publications</a>
+  <a href="index.html#contact"    data-i18n="nav.contact">Contact</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
 
-   <!-- SECCION PREMIOS -->
-    <section id="premios" class="premios">
-        <div class="contenido-seccion">
-          <h2>AWARDS</h2>
-          <div class="fila-premios">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="img/stim2premio.jpg" alt="Avatar" style="width:500px;height:500px;">
-                  <div class="texto-superpuesto">
-                    <h3>January 2023</h3>
-                    <p>Ricardo López-Crespo Award to STIMA2 Project</p>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>Premio Ricardo López-Crespo</h1> 
-                  <p>The STIMA2 project (acronym in English for Single Tree Irrigation Management Algorithms for Almonds) aims to optimize irrigation water use efficiency in almond cultivation through the utilization of various technologies, such as drones equipped with thermal cameras, low-cost agroclimatic stations, and sensor networks for locally measuring farm meteorological conditions.</p> 
+<!-- HEADER -->
+<div class="subpage-header">
+  <div class="container">
+    <a href="index.html" class="subpage-back" data-i18n="awards.back">← Back to home</a>
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="awards.eyebrow">Recognition</span>
+    </div>
+    <h1 class="subpage-title" data-i18n="awards.title">Awards</h1>
+    <p class="subpage-subtitle" data-i18n="awards.subtitle">Honours and prizes received for innovation and research.</p>
+  </div>
+</div>
 
-                </div>
-              </div>
-              <a href="https://www.ias.csic.es/el-proyecto-stima2-premio-ricardo-lopez-crespo-a-proyectos-de-idi-en-el-ambito-de-la-actividad-agroalimentaria/" class="saber-mas">Go link</a>
-            </div>
-            <br>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="img/tripleensayo.png" alt="Avatar" style="width:500px;height:500px;">
-                  <div class="texto-superpuesto">
-                    <h3>March 2023</h3>
-                    <p>MH to Master Final Project</p>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>Radiometric calibration of IR sensors on UAVs</h1> 
-                  <p> In my Master's thesis work, I developed a calibration model for thermal infrared cameras mounted on UAVs. The significant difference between the temperatures generated from a thermal orthomosaic and the temperatures on the ground has made aerial thermography work very slow or scarce. With this work, I managed to solve the problem, achieving differences of less than 0.5 degrees between the two.</p> 
-                </div>
-              </div>
-              <br>
-                <a href="masterthesis.html" class="saber-mas">Now More</a>
-            </div>
-            <br>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="img/ebton.jpeg" alt="Avatar" style="width:500px;height:500px;">
-                  <div class="texto-superpuesto">
-                    <h3>October 2024</h3>
-                    <p>EBTon CSIC Hackathon</p>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>SpinOff Accelerator Award</h1> 
-                  <p>We won a prize of €20,000 for the creation and initial management of a technology-based company (IrriSimple/4DFarms) focused on providing irrigation consulting for farmers using LiDAR and thermography as the main technologies.</p> 
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="awards-grid">
 
-                </div>
-              </div>
-              <a href="https://converge.csic.es/premiados-hackaton-2024/" class="saber-mas">Go link</a>
-            </div>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="img/eitfood.png" alt="Avatar" style="width:500px;height:500px;">
-                  <div class="texto-superpuesto">
-                    <h3>May 2025</h3>
-                    <p>EBTon CSIC Award</p>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>Market experts to support RTOs on Technology Transfer Process TECHBRIDGE Programme</h1> 
-                  <p>We won a prize of €40,000 for initial legal management of a technology-based company (IrriSimple). TechBridge programme focuses on equipping RTOs with the market knowledge and insights necessary to position their technologies in the most suitable market niches. This phase is essential for ensuring that the innovations being developed are not only technologically sound but also commercially viable. </p> 
-
-                </div>
-              </div>
-              <a href="https://www.eitfood.eu/open-calls/market-experts-to-support-rtos-on-technology-transfer-process-techbridge-programme" class="saber-mas">Go link</a>
-            </div>
-          </div>
+      <!-- Award 1 -->
+      <div class="award-card reveal">
+        <img src="img/stim2premio.jpg" alt="Ricardo López-Crespo Award" class="award-img">
+        <div class="award-body">
+          <div class="award-date">January 2023</div>
+          <h3 class="award-title">Ricardo López-Crespo Award — STIMA2 Project</h3>
+          <p class="award-desc">The STIMA2 project aims to optimize irrigation water use efficiency in almond cultivation using drones with thermal cameras, low-cost agroclimatic stations, and IoT sensor networks. Awarded in the R&D&I category for Agri-food activity.</p>
+          <a href="https://www.ias.csic.es/el-proyecto-stima2-premio-ricardo-lopez-crespo-a-proyectos-de-idi-en-el-ambito-de-la-actividad-agroalimentaria/" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="awards.link">View details →</a>
         </div>
-      </section>
-      
-    
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+      </div>
+
+      <!-- Award 2 -->
+      <div class="award-card reveal reveal-delay-1">
+        <img src="img/tripleensayo.png" alt="MH Master Thesis Award" class="award-img">
+        <div class="award-body">
+          <div class="award-date">March 2023</div>
+          <h3 class="award-title">Matrícula de Honor — Master's Final Project</h3>
+          <p class="award-desc">Awarded Matrícula de Honor for the Master's thesis on radiometric calibration of thermal infrared cameras on UAVs. The work reduced temperature error from 6°C to less than 0.5°C between aerial and ground measurements.</p>
+          <a href="masterthesis.html" class="btn btn-outline" data-i18n="awards.link">View details →</a>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
-     <!-- Incluir la biblioteca jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- Incluir la biblioteca Slick Carousel JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
- 
+      <!-- Award 3 -->
+      <div class="award-card reveal">
+        <img src="img/ebton.jpeg" alt="EBTon CSIC Hackathon Award" class="award-img">
+        <div class="award-body">
+          <div class="award-date">October 2024</div>
+          <h3 class="award-title">SpinOff Accelerator Award — EBTon CSIC Hackathon</h3>
+          <p class="award-desc">Won a €20,000 prize for the creation and initial management of IrriSimple / 4DFarms — a technology-based company focused on irrigation consulting using LiDAR and thermography as primary decision-support tools for farmers.</p>
+          <a href="https://converge.csic.es/premiados-hackaton-2024/" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="awards.link">View details →</a>
+        </div>
+      </div>
 
+      <!-- Award 4 -->
+      <div class="award-card reveal reveal-delay-1">
+        <img src="img/eitfood.png" alt="EIT Food TechBridge Award" class="award-img">
+        <div class="award-body">
+          <div class="award-date">May 2025</div>
+          <h3 class="award-title">EIT Food TechBridge Programme — IrriSimple</h3>
+          <p class="award-desc">Won a €40,000 grant through the Market Experts to Support RTOs on Technology Transfer Process programme. TechBridge focuses on equipping RTOs with market knowledge to position technologies in suitable commercial niches, validating IrriSimple's commercial viability.</p>
+          <a href="https://www.eitfood.eu/open-calls/market-experts-to-support-rtos-on-technology-transfer-process-techbridge-programme" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="awards.link">View details →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Rafa</span>
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Rafael Orozco Morán · Built with ♥ in Córdoba</span>
+    <div class="footer-socials">
+      <a href="https://github.com/ROrozcoM" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/rafozco20" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>

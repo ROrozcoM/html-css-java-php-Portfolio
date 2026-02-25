@@ -1,124 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZVRWG83ZDM');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Rafael Orozco</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Incluir la biblioteca Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
- 
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZVRWG83ZDM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rafael Orozco — Own developments: tools and apps for precision agriculture.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Development — Rafael Orozco</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="index.html">Rafa</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    
-                    <li><a href="index.html" onclick="seleccionar()"><-- Back</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
+
+<!-- NAV -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Rafa</a>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="index.html#skills"      data-i18n="nav.skills">Skills</a></li>
+        <li><a href="index.html#background"  data-i18n="nav.background">Background</a></li>
+        <li><a href="index.html#projects"    data-i18n="nav.projects">Projects</a></li>
+        <li><a href="ownprojects.html" class="active" data-i18n="nav.development">Development</a></li>
+        <li><a href="awards.html"             data-i18n="nav.awards">Awards</a></li>
+        <li><a href="publications.html"       data-i18n="nav.publications">Publications</a></li>
+        <li><a href="index.html#contact"     data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+</nav>
 
-    </section>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#skills"     data-i18n="nav.skills">Skills</a>
+  <a href="index.html#background" data-i18n="nav.background">Background</a>
+  <a href="index.html#projects"   data-i18n="nav.projects">Projects</a>
+  <a href="ownprojects.html"       data-i18n="nav.development">Development</a>
+  <a href="awards.html"            data-i18n="nav.awards">Awards</a>
+  <a href="publications.html"      data-i18n="nav.publications">Publications</a>
+  <a href="index.html#contact"    data-i18n="nav.contact">Contact</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
 
-    <!-- SECCION OWNPROJECTS -->
-    <section id="development" class="development">
-        <div class="contenido-seccion">
-          <h2>OWN DEVELOPMENTS</h2>
-          <div class="card-container">
-            <div class="card">
-                <div class="card-image">
-                  <img src="img/nodo2.png" alt="Norway">
-                </div>
-                <div class="card-content">
-                  <div class="card-header">
-                    <h3>PyRADTEMCam</h3>
-                  </div>
-                  <p>PyRADTEMCAM addresses the challenge of improving thermography accuracy in agriculture by correcting errors in drone-mounted thermal cameras using continuous temperature sensors, calibration panels, algorithms and modeling.</p>
-                  <a href="masterthesis.html" class="card-button">Check development</a>
-                </div>
-              </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="img/sigpac_parcelas.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>SIGPAC parcelas</h3>
-                </div>
-                <p>A web application for downloading SIGPAC agricultural plot vectors in Spain, enabling selection by individual codes, interactive map areas, or advanced filters (area, slope, land use), with direct export to GeoPackage and Shapefile formats.</p>
-                <a href="https://sigpac-dash-app-38394fbc3e5a.herokuapp.com/home" class="card-button">Check development.</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="img/nost_vis.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>Nostalgic Visualizator</h3>
-                </div>
-                <p>A visualizer for historical images in Spain, allowing users to select a region of interest and explore archival imagery from various periods. This tool offers an accessible way to study landscape and historical changes over time</p>
-                <a href="https://nostalgicvisualizator.ey.r.appspot.com/" class="card-button">Check development.</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="img/pycourse.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>Python Courses</h3>
-                </div>
-                <p>I have conducted Python courses focused on agriculture, covering data analysis, image processing, and geospatial data analysis. These courses help professionals apply Python to optimize process for better decision-making on field</p>
-                <a href="" class="card-button">Check development</a>
-              </div>
-            </div>
+<!-- HEADER -->
+<div class="subpage-header">
+  <div class="container">
+    <a href="index.html" class="subpage-back" data-i18n="dev.back">← Back to home</a>
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="dev.eyebrow">Development</span>
+    </div>
+    <h1 class="subpage-title" data-i18n="dev.title">Own Developments</h1>
+    <p class="subpage-subtitle" data-i18n="dev.subtitle">Tools and applications I built to solve real problems in the field.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="dev-grid">
+
+      <!-- Dev 1 -->
+      <div class="dev-card reveal">
+        <img src="img/nodo2.png" alt="PyRADTEMCam" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-blue">LoRaWAN</span>
+            <span class="tag tag-green">UAV</span>
+          </div>
+          <h3 class="dev-title">PyRADTEMCam</h3>
+          <p class="dev-desc">Radiometric calibration system for thermal infrared cameras mounted on UAVs. Combines IoT sensor nodes with LoRaWAN communication, calibration panels, and a Python correction model — reducing temperature error from 6°C to &lt;0.5°C.</p>
+          <a href="masterthesis.html" class="btn btn-outline" data-i18n="dev.check">Check it out →</a>
         </div>
-      </section>
-    
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+      </div>
+
+      <!-- Dev 2 -->
+      <div class="dev-card reveal reveal-delay-1">
+        <img src="img/sigpac_parcelas.png" alt="SIGPAC Parcelas app" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-green">Dash</span>
+            <span class="tag tag-blue">GIS</span>
+          </div>
+          <h3 class="dev-title">SIGPAC Parcelas</h3>
+          <p class="dev-desc">A web application for downloading SIGPAC agricultural plot vectors across Spain. Supports selection by individual parcel codes, interactive map drawing, and advanced filters (area, slope, land use). Exports directly to GeoPackage and Shapefile formats.</p>
+          <a href="https://sigpac-dash-app-38394fbc3e5a.herokuapp.com/home" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="dev.check">Check it out →</a>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
-     <!-- Incluir la biblioteca jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- Incluir la biblioteca Slick Carousel JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
- 
+      <!-- Dev 3 -->
+      <div class="dev-card reveal">
+        <img src="img/nost_vis.png" alt="Nostalgic Visualizator" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-green">GEE</span>
+            <span class="tag tag-blue">Web App</span>
+          </div>
+          <h3 class="dev-title">Nostalgic Visualizator</h3>
+          <p class="dev-desc">A web visualizer for historical imagery in Spain, allowing users to select a region of interest and explore archival aerial photography from different decades. An accessible tool for studying landscape evolution and historical land-use changes.</p>
+          <a href="https://nostalgicvisualizator.ey.r.appspot.com/" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="dev.check">Check it out →</a>
+        </div>
+      </div>
 
+      <!-- Dev 4 -->
+      <div class="dev-card reveal reveal-delay-1">
+        <img src="img/pycourse.png" alt="Python Courses for Agriculture" class="dev-img">
+        <div class="dev-body">
+          <div style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-green">Teaching</span>
+            <span class="tag tag-green">GIS</span>
+          </div>
+          <h3 class="dev-title">Python Courses for Agriculture</h3>
+          <p class="dev-desc">Specialized Python courses designed for agricultural professionals and researchers, covering data analysis, thermal and multispectral image processing, and geospatial analysis. Delivered to both private companies and public institutions.</p>
+          <span class="tag tag-gold" style="margin-top:auto;">Available on request</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Rafa</span>
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Rafael Orozco Morán · Built with ♥ in Córdoba</span>
+    <div class="footer-socials">
+      <a href="https://github.com/ROrozcoM" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/rafozco20" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>

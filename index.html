@@ -1,580 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZVRWG83ZDM');
+  </script>
 
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rafael Orozco Morán — Agricultural Engineer & Data Scientist specializing in precision agriculture, remote sensing and irrigation optimization.">
+  <meta name="author" content="Rafael Orozco Morán">
 
-      gtag('config', 'G-ZVRWG83ZDM');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Rafael Orozco</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Incluir la biblioteca Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
-    <!-- Swiper.js CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- Swiper.js JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rafael Orozco — Portfolio">
+  <meta property="og:description" content="Agricultural Engineer & Data Scientist specializing in precision agriculture and remote sensing.">
+  <meta property="og:type" content="website">
 
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Rafael Orozco — Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="#">Rafa</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#background" onclick="seleccionar()">BACKGROUND</a></li>
-                    <li><a href="#services" onclick="seleccionar()">PROJECTS</a></li>
-                    <li><a href="ownprojects.html" onclick="seleccionar()">DEVELOPMENT</a></li>
-                    <li><a href="awards.html" onclick="seleccionar()">AWARDS</a></li>
-                    <li><a href="publications.html" onclick="seleccionar()">PUBLICATIONS</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo">Rafa</a>
+
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="#skills"      data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#background"  data-i18n="nav.background">Background</a></li>
+        <li><a href="#projects"    data-i18n="nav.projects">Projects</a></li>
+        <li><a href="ownprojects.html" data-i18n="nav.development">Development</a></li>
+        <li><a href="awards.html"  data-i18n="nav.awards">Awards</a></li>
+        <li><a href="publications.html" data-i18n="nav.publications">Publications</a></li>
+        <li><a href="#contact"     data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="lang-toggle" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile overlay menu -->
+<div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="#skills"      data-i18n="nav.skills">Skills</a>
+  <a href="#background"  data-i18n="nav.background">Background</a>
+  <a href="#projects"    data-i18n="nav.projects">Projects</a>
+  <a href="ownprojects.html" data-i18n="nav.development">Development</a>
+  <a href="awards.html"  data-i18n="nav.awards">Awards</a>
+  <a href="publications.html" data-i18n="nav.publications">Publications</a>
+  <a href="#contact"     data-i18n="nav.contact">Contact</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="inicio" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-content">
+    <!-- Left -->
+    <div class="hero-left reveal">
+      <div class="hero-eyebrow">
+        <div class="hero-dot"></div>
+        <span class="hero-eyebrow-text" data-i18n="hero.status">Available for collaboration</span>
+      </div>
+
+      <h1 class="hero-name">Rafael<br>Orozco Morán</h1>
+
+      <p class="hero-title">
+        <span data-i18n="hero.subtitle">Agricultural Engineer &amp; </span>
+        <span class="hero-title-typed" id="typed-text"></span><span class="cursor">|</span>
+      </p>
+
+      <p class="hero-desc" data-i18n="hero.desc">
+        Specializing in precision agriculture, irrigation optimization, and remote sensing technologies for sustainable and efficient farming.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_work">View My Work</a>
+        <a href="#contact"  class="btn btn-outline"  data-i18n="hero.cta_contact">Get In Touch</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/ROrozcoM"              target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/rafozco20"            target="_blank" rel="noopener" aria-label="Twitter / X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://agrophenolab.csic.es/about/directorio/rafael-orozco-moran/" target="_blank" rel="noopener" aria-label="CSIC Profile">
+          <i class="fa-solid fa-flask"></i>
+        </a>
+      </div>
     </div>
 
-    <!-- SECCION INICIO -->
-    <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="img/IMG_3131.jpg" alt="">
-            </div>
-            <h1>RAFAEL OROZCO MORÁN</h1>
-            <h2>Agriculture Engineer - Data Scienscist Agriculture</h2>
-            <div class="redes">
-                <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-solid fa-rss"></i></a>
-            </div>
-        </div>
-    </section>
+    <!-- Right — photo -->
+    <div class="hero-right reveal reveal-delay-2">
+      <div class="hero-photo-wrapper">
+        <div class="hero-photo-ring-2"></div>
+        <div class="hero-photo-ring"></div>
+        <img src="img/IMG_3131.jpg" alt="Rafael Orozco Morán" class="hero-photo">
 
-<!-- SECCION SKILLS -->
-<section class="skills" id="skills">
-    <div class="contenido-seccion">
-        <h2>Skills</h2>
-        <div class="fila">
-            <!-- Technical Skill -->
-            <div class="col">
-                <h3>Code Skills</h3>
-                <div class="skill">
-                    <i class="fab fa-python"></i> <!-- Icono de Python -->
-                    <span>Python  </span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>90%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-html5"></i> <!-- Icono de HTML5 -->
-                    <span>HTML & CSS & JavaScript</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>40%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-map"></i> <!-- Icono de mapa -->
-                    <span>QGIS - Spatial Analysis</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>95%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-image"></i> <!-- Icono de imagen -->
-                    <span>Image Analysis</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-cogs"></i> <!-- Icono de engranaje -->
-                    <span>GEE Code</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>85%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Professional Skills -->
-            <div class="col">
-                <h3>Professional Skills</h3>
-                <div class="skill">
-                    <i class="fas fa-comments"></i> <!-- Icono de comentarios -->
-                    <span>Communication</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-users"></i> <!-- Icono de usuarios -->
-                    <span>Team Work</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>80%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-lightbulb"></i> <!-- Icono de bombilla -->
-                    <span>Creativity</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>70%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-flag-checkered"></i> <!-- Icono de meta -->
-                    <span>Dedication</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>90%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-clipboard-list"></i> <!-- Icono de lista -->
-                    <span>Project Management</span>
-                    <div class="barra-skill">
-                        <div class="progreso">
-                            <span>80%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-stat stat-papers">
+          <div class="hero-stat-num">3+</div>
+          <div class="hero-stat-label" data-i18n="hero.stat_papers">Publications</div>
         </div>
+
+        <div class="hero-stat stat-years">
+          <div class="hero-stat-num">5+</div>
+          <div class="hero-stat-label" data-i18n="hero.stat_years">Years Research</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <a href="#skills" class="hero-scroll-cue" aria-label="Scroll down">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </a>
 </section>
 
 
-
-    <!-- SECCION CURRICULUM -->
-    <section id="background" class="background">
-        <div class="contenido-seccion">
-            <h2>Background</h2>
-            <div class="fila">
-                <!-- Work Experience -->
-                <div class="col derecha">
-                    <h3>Work Experience</h3>
-                    <div class="item der">
-                        <h4>Agronomist Engineer</h4>
-                        <span class="casa"><a href="https://www.ias.csic.es/">IAS</a>, <a href="https://www.csic.es/es">CSIC</a></span>
-                        <span class="fecha">2023 - now</span>
-                        <p>Continuation of the research line of the STIMA2 project. Sensorization and monitoring of fruit trees for the automatic optimization of the resources to be used.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
-                    </div>
-                    <div class="item der">
-                        <h4>Python Programming Instructor</h4>
-                        <span class="casa">Private/Public Sector</span>
-                        <span class="fecha">2021 - now</span>
-                        <p>Leading a specialized course on Python's role in agronomic data analysis and GIS integration for private and public companies.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
-                    </div>
-                    <div class="item der">
-                        <h4>Affiliate professor</h4>
-                        <span class="casa"><a href="https://www.uco.es/">UCO</a></span>
-                        <span class="fecha">2023 - now</span>
-                        <p>Contributing to the course Agricultural Mechanization Machinery in the Bachelor’s Degree in Agricultural Engineering and Oenology, focusing on advanced sensing technologies in agricultural machinery.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
-                    </div>
-                    <div class="item der">
-                        <h4>Technical Agronomist Engineer</h4>
-                        <span class="casa">IAS, CSIC</span>
-                        <span class="fecha">2020-2023</span>
-                        <p>Agronomy Department at AgroPhenoLab working on the STIMA2 project (High-resolution smart irrigation in almond tree).</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
-                    </div>
-                    <div class="item der">
-                        <h4>Sales Technician</h4>
-                        <span class="casa">Decathlon Spain S.A</span>
-                        <span class="fecha">2020</span>
-                        <p>Worked as a salesperson in the nature section during the last year of my degree.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Education -->
-                <div class="col izquierda">
-                    <h3>Education</h3>
-                    <div class="item izq">
-                        <h4>PhD Studies</h4>
-                        <span class="casa">IAS, CSIC - UCO</span>
-                        <span class="fecha">2023 - now</span>
-                        <p>Research on irrigation optimization in fruit trees, focusing on the variability of behavior under hydric stress.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div>
-                    <div class="item izq">
-                        <h4>Agronomic Engineering Master</h4>
-                        <span class="casa"><a href="http://www.uco.es/etsiam/es/grados/gr-ing-agroalimentaria">ETSIAM</a>, UCO</span>
-                        <span class="fecha">2021 - 2023</span>
-                        <p>Specialization in Rural Environment Technology, Agro-food Industries, and Agricultural Production Technology.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div>
-                    <div class="item izq">
-                        <h4>Agri-food and Rural Environment Engineering</h4>
-                        <span class="casa"><a href="http://www.uco.es/etsiam/es/grados/gr-ing-agroalimentaria">ETSIAM</a>, UCO</span>
-                        <span class="fecha">2017 - 2021</span>
-                        <p>Specialization in Agricultural Operations, including animal and plant production technologies.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-
-
-
-
-
-
-<!--SECCION NUEVA-->
-<section id="services" class="services-section">
-    <h2>HIGHLIGHTS</h2>
-    <div class="container">
-        <div class="service-card">
-            <div class="corner-decorator top-left"></div>
-            <i class="icon fas fa-paper-plane"></i>
-            <h3>PhD Studies</h3>
-            <p>Doctoral thesis developed in the field of irrigation optimization in fruit trees</p>
-            <a href="phdstudies.html" class="circle-btn">+</a> <!-- Reemplaza URL_DE_REDIRECCION con el enlace deseado -->
-        </div>
-        <div class="service-card">
-            <i class="icon fas fa-briefcase"></i>
-            <h3>Current Research Projects</h3>
-            <p>Ongoing work within the profession</p>
-            <a href="activeresearchprojects.html" class="circle-btn">+</a> <!-- Reemplaza URL_DE_REDIRECCION con el enlace deseado -->
-        </div>
-        <div class="service-card">
-            <i class="icon fas fa-rocket"></i>
-            <h3>Future Research Projects</h3>
-            <p>Future work within the profession companies</p>
-            <a href="futureresearchprojects.html" class="circle-btn">+</a> <!-- Reemplaza URL_DE_REDIRECCION con el enlace deseado -->
-        </div>
-        <div class="service-card">
-            <i class="icon fas fa-desktop"></i>
-            <h3>Own Developments</h3>
-            <p>Cutting-edge technology development and DIY projects</p>
-            <a href="ownprojects.html" class="circle-btn">+</a> <!-- Reemplaza URL_DE_REDIRECCION con el enlace deseado -->
-        </div>
-        <div class="service-card">
-            <i class="icon fas fa-award"></i>
-            <h3>Awards</h3>
-            <p>Awards and honors for various completed projects</p>
-            <a href="awards.html" class="circle-btn">+</a> <!-- Reemplaza URL_DE_REDIRECCION con el enlace deseado -->
-        </div>
-        <div class="service-card">
-            <div class="corner-decorator bottom-right"></div>
-            <i class="icon fas fa-newspaper"></i>
-            <h3>Publications</h3>
-            <p>Scientific publications and R&D&I during the development of my doctoral thesis</p>
-            <a href="publications.html" class="circle-btn">+</a> <!-- Reemplaza URL_DE_REDIRECCION con el enlace deseado -->
-        </div>
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section id="skills" class="section skills">
+  <div class="container">
+    <div class="section-eyebrow reveal">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="skills.eyebrow">Expertise</span>
     </div>
-</section>
+    <h2 class="section-title reveal">
+      <span data-i18n="skills.title_1">What I </span><span data-i18n="skills.title_2">work with</span>
+    </h2>
 
+    <div class="skills-grid">
+      <!-- Technical -->
+      <div class="skill-group reveal">
+        <div class="skill-group-title">
+          <i class="fa-solid fa-code"></i>
+          <span data-i18n="skills.tech_title">Technical Skills</span>
+        </div>
 
-
-     <!-- SECCION PROYECTOS 
-     <section id="proyectos" class="proyectos">
-        <div class="contenido-seccion">
-          <h2>PROJECTS</h2>
-          <div class="card-container">
-            <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png" alt="Norway">
-                </div>
-                <div class="card-content">
-                  <div class="card-header">
-                    <h3>PhD Thesis Single Project</h3>
-                    <span class="badge_on">Active</span>
-                  </div>
-                  <p>My doctoral thesis is developed in the field of irrigation optimization in fruit trees by detection of the variability of behavior of fruit trees in the face of hydric stress...</p>
-                  <a href="https://agrophenolab.csic.es/about/directorio/rafael-orozco-moran/" class="card-button">Learn more</a>
-                </div>
-              </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="https://www.uco.es/agronomia/images/1.JPG" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>"PROLIVE" Solutions Project</h3>
-                  <span class="badge_on">Active</span>
-                </div>
-                <p>This project focuses on providing practical solutions for olive grove management and understanding its genetics to develop varieties resistant to climate change effects...</p>
-                <a href="https://www.mercacei.com/noticia/60544/actualidad/proyecto-prolive:-innovacion-al-servicio-de-la-mejora-genetica-del-olivar-para-adaptarlo-al-cambio-climatico.html" class="card-button">Learn more</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="img/smartalmond.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>"Smart Almond" Op. Team</h3>
-                  <span class="badge_on">Active</span>
-                </div>
-                <p>Operational team loking for optimization of almond irrigation using IoT technology, smart weather stations, and remote sensors to enhance water use efficiency and environmental care...</p>
-                <a href="https://www.youtube.com/channel/UCwzyKwThooxODVq89-uzvUw" class="card-button">Learn more</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>"GoINGNuts" Operat. Team</h3>
-                  <span class="badge_ring">ToStart</span>
-                </div>
-                <p>National Operational team loking for optimization of almond producing system, from establishment to irrigation to pests and diseases using teledetection technologies...</p>
-                <a href="" class="card-button">Learn more</a>
-              </div>
-            </div>
-            <div class="card">
-                <div class="card-image">
-                  <img src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png" alt="Norway">
-                </div>
-                <div class="card-content">
-                  <div class="card-header">
-                    <h3>"IRIS2" Develop.  Project </h3>
-                    <span class="badge_ring">ToStart</span>
-                  </div>
-                  <p>Develop flexible pumping control systems for optimized, sector-specific irrigation using user-friendly mobile and web applications for optimal irrigation programming... </p>
-                  <a href="" class="card-button">Learn more</a>
-                </div>
-              </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="skill-pct">90%</span>
           </div>
-          
-          
-          
+          <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
         </div>
-      </section>
-      -->
 
-     <!-- SECCION DEVELOPMENT 
-     <section id="development" class="development">
-        <div class="contenido-seccion">
-          <h2>OWN DEVELOPMENTS</h2>
-          <div class="card-container">
-            <div class="card">
-                <div class="card-image">
-                  <img src="img/nodo2.png" alt="Norway">
-                </div>
-                <div class="card-content">
-                  <div class="card-header">
-                    <h3>PyRADTEMCam</h3>
-                  </div>
-                  <p>PyRADTEMCAM addresses the challenge of improving thermography accuracy in agriculture by correcting errors in drone-mounted thermal cameras using continuous temperature sensors, calibration panels, algorithms and modeling.</p>
-                  <a href="masterthesis.html" class="card-button">Check development</a>
-                </div>
-              </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="img/nost_vis.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>Nostalgic Visualizator</h3>
-                </div>
-                <p>A visualizer for historical images in Spain, allowing users to select a region of interest and explore archival imagery from various periods. This tool offers an accessible way to study landscape and historical changes over time</p>
-                <a href="https://nostalgicvisualizator.ey.r.appspot.com/" class="card-button">Check development</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image">
-                <img src="img/pycourse.png" alt="Norway">
-              </div>
-              <div class="card-content">
-                <div class="card-header">
-                  <h3>Python Courses</h3>
-                </div>
-                <p>I have conducted Python courses focused on agriculture, covering data analysis, image processing, and geospatial data analysis. These courses help professionals apply Python to optimize process for better decision-making on field</p>
-                <a href="" class="card-button">Check development</a>
-              </div>
-            </div>
-        </div>
-      </section>
-      -->
-
-    <!-- SECCION PREMIOS 
-    <section id="premios" class="premios">
-        <div class="contenido-seccion">
-          <h2>AWARDS</h2>
-          <div class="fila-premios">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="img/stim2premio.jpg" alt="Avatar" style="width:500px;height:500px;">
-                  <div class="texto-superpuesto">
-                    <h3>January 2023</h3>
-                    <p>Ricardo López-Crespo Award to STIMA2 Project</p>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>Premio Ricardo López-Crespo</h1> 
-                  <p>The STIMA2 project (acronym in English for Single Tree Irrigation Management Algorithms for Almonds) aims to optimize irrigation water use efficiency in almond cultivation through the utilization of various technologies, such as drones equipped with thermal cameras, low-cost agroclimatic stations, and sensor networks for locally measuring farm meteorological conditions.</p> 
-
-                </div>
-              </div>
-              <a href="https://www.ias.csic.es/el-proyecto-stima2-premio-ricardo-lopez-crespo-a-proyectos-de-idi-en-el-ambito-de-la-actividad-agroalimentaria/" class="saber-mas">Go link</a>
-            </div>
-            <br>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="img/tripleensayo.png" alt="Avatar" style="width:500px;height:500px;">
-                  <div class="texto-superpuesto">
-                    <h3>March 2023</h3>
-                    <p>MH to Master Final Project</p>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <h1>Radiometric calibration of IR sensors on UAVs</h1> 
-                  <p> In my Master's thesis work, I developed a calibration model for thermal infrared cameras mounted on UAVs. The significant difference between the temperatures generated from a thermal orthomosaic and the temperatures on the ground has made aerial thermography work very slow or scarce. With this work, I managed to solve the problem, achieving differences of less than 0.5 degrees between the two.</p> 
-                </div>
-              </div>
-              <br>
-                <a href="masterthesis.html" class="saber-mas">Now More</a>
-            </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-map"></i> QGIS · Spatial Analysis</span>
+            <span class="skill-pct">95%</span>
           </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
         </div>
-      </section>
-      -->
-      
-<!-- SECCION PORTFOLIO -->
-<section id="portfolio" class="portfolio">
-    <div class="contenido-seccion">
-        <h2>GALLERY</h2>
-        <div class="grid-gallery">
-            <div class="gallery-item">
-                <img src="img/mapa_alturas.png" alt="OrthoImagery">
-                <div class="overlay">
-                    <h3>OrthoImagery</h3>
-                    <p>UAV's</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/lidartrees.gif" alt="Aerial LiDAR">
-                <div class="overlay">
-                    <h3>Aerial LiDAR</h3>
-                    <p>3D Models</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/mapa_IR.png" alt="Thermal">
-                <div class="overlay">
-                    <h3>Thermal</h3>
-                    <p>Calibrated IR Images</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/sensores_almodovar.png" alt="Stress Monitoring">
-                <div class="overlay">
-                    <h3>Stress Monitoring</h3>
-                    <p>Continuous measurements</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/estacionmeteo3.png" alt="Micro-Meteorology">
-                <div class="overlay">
-                    <h3>Micro-Meteorology</h3>
-                    <p>Farm level</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/treescolor.gif" alt="Terrestrial LiDAR">
-                <div class="overlay">
-                    <h3>Terrestrial LiDAR</h3>
-                    <p>Full Canopy Modelling</p>
-                </div>
-            </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-satellite"></i> Google Earth Engine</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
         </div>
-    </div>
-</section>
 
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-thermometer-half"></i> Image Analysis · IR</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+        </div>
 
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-brands fa-html5"></i> HTML · CSS · JavaScript</span>
+            <span class="skill-pct">55%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="55%"></div></div>
+        </div>
 
-
-<!-- CONTACTO -->
-
-<section id="contacto" class="contacto">
-  <div class="contenido-seccion">
-    <h2>CONTACT</h2>
-    <div class="fila">
-      <!-- Formulario -->
-      <div class="col">
-        <form id="formulario" action="https://formspree.io/f/mblynzlo" method="POST">
-          <input type="text" name="nombre" placeholder="Nombre" required />
-          <input type="email" name="email" placeholder="Correo electrónico" required />
-          <textarea name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
-
-          <!-- Honeypot -->
-          <input type="text" name="_gotcha" style="display:none" />
-
-          <button type="submit" class="boton-enviar">Enviar mensaje</button>
-        </form>
-
-        <!-- Mensaje de éxito -->
-        <div id="form-mensaje" style="display:none; margin-top:1rem; color:green; font-weight:bold;">
-          ¡Tu mensaje ha sido enviado con éxito! Te responderemos pronto.
+        <div class="tech-tags">
+          <span class="tag tag-green"><i class="fa-solid fa-drone"></i> UAV / Drones</span>
+          <span class="tag tag-green">LiDAR</span>
+          <span class="tag tag-blue">R</span>
+          <span class="tag tag-blue">SQL</span>
+          <span class="tag tag-green">LoRaWAN</span>
+          <span class="tag tag-blue">IoT</span>
+          <span class="tag tag-green">GIS</span>
         </div>
       </div>
 
-      <!-- Mapa e info -->
-      <div class="col">
-        <img src="img/ubicacion.png" alt="Ubicación" />
-        <div class="info">
-          <ul>
-            <li><i class="fa-solid fa-location-dot"></i> Córdoba, España</li>
-            <li><i class="fa-solid fa-mobile-screen"></i> Tlf - 676374405</li>
-            <li><i class="fa-solid fa-envelope"></i> Email: rafozco@gmail.com</li>
-          </ul>
+      <!-- Professional -->
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-group-title">
+          <i class="fa-solid fa-user-tie"></i>
+          <span data-i18n="skills.soft_title">Professional Skills</span>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-comments"></i> Communication</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-users"></i> Team Work</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-lightbulb"></i> Creativity</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-flag-checkered"></i> Dedication</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name"><i class="fa-solid fa-clipboard-list"></i> Project Management</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+        </div>
+
+        <div class="tech-tags">
+          <span class="tag tag-gold">Spanish · Native</span>
+          <span class="tag tag-blue">English · B2</span>
+          <span class="tag tag-green">Research</span>
+          <span class="tag tag-green">Teaching</span>
+          <span class="tag tag-blue">Consulting</span>
         </div>
       </div>
     </div>
@@ -582,24 +283,369 @@
 </section>
 
 
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+<!-- ============================================================
+     BACKGROUND / TIMELINE
+     ============================================================ -->
+<section id="background" class="section background">
+  <div class="container">
+    <div class="section-eyebrow reveal">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="background.eyebrow">Career</span>
+    </div>
+    <h2 class="section-title reveal">
+      <span data-i18n="background.title_1">My </span><span data-i18n="background.title_2">Background</span>
+    </h2>
+
+    <!-- Tabs -->
+    <div class="timeline-tabs reveal">
+      <button class="timeline-tab active" data-target="panel-work">
+        <i class="fa-solid fa-briefcase"></i>
+        <span data-i18n="background.tab_work">Work Experience</span>
+      </button>
+      <button class="timeline-tab" data-target="panel-edu">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span data-i18n="background.tab_edu">Education</span>
+      </button>
+    </div>
+
+    <!-- Work Experience panel -->
+    <div class="timeline-panel active reveal" id="panel-work">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">2024 — Present</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role" style="display:flex;align-items:center;gap:12px;">
+              Co-Founder &amp; CTO
+              <img src="img/asymetree.png" alt="ASYMETREE" style="height:22px;width:auto;opacity:0.9;filter:brightness(0) invert(1);">
+            </div>
+            <div class="timeline-org">ASYMETREE — AgriTech Spinoff</div>
+            <p class="timeline-desc">Co-founded ASYMETREE, a technology-based company (EBT) focused on precision irrigation consulting for farmers. Uses LiDAR-derived canopy models and UAV thermography as core decision-support technologies. Backed by €20,000 in seed funding (CSIC EBTon + EIT Food TechBridge).</p>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
-    <!-- Incluir la biblioteca jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Incluir la biblioteca Slick Carousel JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <div class="timeline-item">
+          <div class="timeline-date">2023 — Present</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">Agronomist Engineer</div>
+            <div class="timeline-org"><a href="https://www.ias.csic.es/" target="_blank" rel="noopener">IAS</a> · <a href="https://www.csic.es/" target="_blank" rel="noopener">CSIC</a></div>
+            <p class="timeline-desc">Continuation of the STIMA2 project research line — sensorization and monitoring of fruit trees for the automatic optimization of irrigation resources.</p>
+          </div>
+        </div>
 
+        <div class="timeline-item">
+          <div class="timeline-date">2023 — Present</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">Affiliate Professor</div>
+            <div class="timeline-org"><a href="https://www.uco.es/" target="_blank" rel="noopener">UCO</a></div>
+            <p class="timeline-desc">Contributing to the Agricultural Mechanization Machinery course (Bachelor's in Agricultural Engineering & Oenology), focusing on advanced sensing technologies.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2021 — Present</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">Python Programming Instructor</div>
+            <div class="timeline-org">Private & Public Sector</div>
+            <p class="timeline-desc">Leading specialized courses on Python's role in agronomic data analysis and GIS integration for private and public companies.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2020 — 2023</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">Technical Agronomist Engineer</div>
+            <div class="timeline-org">IAS · CSIC — AgroPhenoLab</div>
+            <p class="timeline-desc">Agronomy Department at AgroPhenoLab working on the STIMA2 project (High-resolution smart irrigation in almond tree).</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2020</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">Sales Technician</div>
+            <div class="timeline-org">Decathlon Spain S.A.</div>
+            <p class="timeline-desc">Worked as a salesperson in the nature section during the last year of my degree.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Education panel -->
+    <div class="timeline-panel" id="panel-edu">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">2023 — Present</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">PhD Studies</div>
+            <div class="timeline-org">IAS · CSIC — UCO</div>
+            <p class="timeline-desc">Research on irrigation optimization in fruit trees, focusing on the variability of behavior under hydric stress. Supervised at AgroPhenoLab.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2021 — 2023</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">Agronomic Engineering Master</div>
+            <div class="timeline-org"><a href="http://www.uco.es/etsiam/" target="_blank" rel="noopener">ETSIAM</a> · UCO</div>
+            <p class="timeline-desc">Specialization in Rural Environment Technology, Agro-food Industries, and Agricultural Production Technology. Graduated with MH distinction.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2017 — 2021</div>
+          <div class="timeline-card-inner">
+            <div class="timeline-role">Agri-food &amp; Rural Environment Engineering</div>
+            <div class="timeline-org"><a href="http://www.uco.es/etsiam/" target="_blank" rel="noopener">ETSIAM</a> · UCO</div>
+            <p class="timeline-desc">Specialization in Agricultural Operations, including animal and plant production technologies.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HIGHLIGHTS
+     ============================================================ -->
+<section id="projects" class="section highlights">
+  <div class="container">
+    <div class="section-eyebrow reveal">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="highlights.eyebrow">Portfolio</span>
+    </div>
+    <h2 class="section-title reveal">
+      <span data-i18n="highlights.title_1">Areas of </span><span data-i18n="highlights.title_2">Work</span>
+    </h2>
+
+    <div class="highlights-grid">
+
+      <a href="phdstudies.html" class="highlight-card reveal">
+        <div class="highlight-icon"><i class="fa-solid fa-microscope"></i></div>
+        <div class="highlight-title" data-i18n="highlights.phd_title">PhD Studies</div>
+        <div class="highlight-desc" data-i18n="highlights.phd_desc">Doctoral research on irrigation optimization in fruit trees, focusing on hydric stress detection.</div>
+        <div class="highlight-cta" data-i18n="highlights.explore">Explore →</div>
+      </a>
+
+      <a href="activeresearchprojects.html" class="highlight-card reveal reveal-delay-1">
+        <div class="highlight-icon"><i class="fa-solid fa-flask-vial"></i></div>
+        <div class="highlight-title" data-i18n="highlights.res_title">Research Projects</div>
+        <div class="highlight-desc" data-i18n="highlights.res_desc">Ongoing scientific work within precision agriculture and smart farming initiatives.</div>
+        <div class="highlight-cta" data-i18n="highlights.explore">Explore →</div>
+      </a>
+
+      <a href="futureresearchprojects.html" class="highlight-card reveal reveal-delay-2">
+        <div class="highlight-icon"><i class="fa-solid fa-rocket"></i></div>
+        <div class="highlight-title" data-i18n="highlights.fut_title">Future Projects</div>
+        <div class="highlight-desc" data-i18n="highlights.fut_desc">Upcoming research lines and development projects in the agri-tech field.</div>
+        <div class="highlight-cta" data-i18n="highlights.explore">Explore →</div>
+      </a>
+
+      <a href="ownprojects.html" class="highlight-card reveal">
+        <div class="highlight-icon"><i class="fa-solid fa-code"></i></div>
+        <div class="highlight-title" data-i18n="highlights.dev_title">Own Developments</div>
+        <div class="highlight-desc" data-i18n="highlights.dev_desc">Open-source tools and apps — from thermal camera calibration to GIS web apps.</div>
+        <div class="highlight-cta" data-i18n="highlights.explore">Explore →</div>
+      </a>
+
+      <a href="awards.html" class="highlight-card reveal reveal-delay-1">
+        <div class="highlight-icon"><i class="fa-solid fa-award"></i></div>
+        <div class="highlight-title" data-i18n="highlights.awa_title">Awards</div>
+        <div class="highlight-desc" data-i18n="highlights.awa_desc">National and international recognition for innovation in agri-tech research.</div>
+        <div class="highlight-cta" data-i18n="highlights.explore">Explore →</div>
+      </a>
+
+      <a href="publications.html" class="highlight-card reveal reveal-delay-2">
+        <div class="highlight-icon"><i class="fa-solid fa-newspaper"></i></div>
+        <div class="highlight-title" data-i18n="highlights.pub_title">Publications</div>
+        <div class="highlight-desc" data-i18n="highlights.pub_desc">Peer-reviewed journal articles and conference papers on precision irrigation.</div>
+        <div class="highlight-cta" data-i18n="highlights.explore">Explore →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section id="gallery" class="section gallery">
+  <div class="container">
+    <div class="section-eyebrow reveal">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="gallery.eyebrow">Visual Work</span>
+    </div>
+    <h2 class="section-title reveal">
+      <span data-i18n="gallery.title_1">Field </span><span data-i18n="gallery.title_2">Gallery</span>
+    </h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="img/mapa_alturas.png" alt="OrthoImagery — UAV mapping" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-title">OrthoImagery</div>
+          <div class="gallery-sub">UAV Mapping</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="img/lidartrees.gif" alt="Aerial LiDAR — 3D Models" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Aerial LiDAR</div>
+          <div class="gallery-sub">3D Canopy Models</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="img/mapa_IR.png" alt="Thermal Imagery — Calibrated IR" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Thermal Imagery</div>
+          <div class="gallery-sub">Calibrated IR</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <img src="img/sensores_almodovar.png" alt="Stress Monitoring — IoT sensors" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Stress Monitoring</div>
+          <div class="gallery-sub">IoT Field Sensors</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="img/estacionmeteo3.png" alt="Micro-Meteorology — farm level" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Micro-Meteorology</div>
+          <div class="gallery-sub">Farm-level Stations</div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="img/treescolor.gif" alt="Terrestrial LiDAR — canopy modelling" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Terrestrial LiDAR</div>
+          <div class="gallery-sub">Full Canopy Modelling</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <div class="section-eyebrow reveal">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="contact.eyebrow">Get In Touch</span>
+    </div>
+    <h2 class="section-title reveal">
+      <span data-i18n="contact.title_1">Let's </span><span data-i18n="contact.title_2">Connect</span>
+    </h2>
+
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="contact-info reveal">
+        <p class="contact-desc" data-i18n="contact.tagline">
+          Have a project in mind or want to collaborate? I'd love to hear from you.
+        </p>
+
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact.loc_label">Location</div>
+            <div class="contact-item-value" data-i18n="contact.loc_val">Córdoba, Spain</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact.tel_label">Phone</div>
+            <div class="contact-item-value">+34 676 374 405</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact.mail_label">Email</div>
+            <div class="contact-item-value">rafozco@gmail.com</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="contact-form reveal reveal-delay-1" id="contact-form"
+            action="https://formspree.io/f/mblynzlo" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="form-name" data-i18n="contact.name_label">Name</label>
+            <input class="form-input" type="text" id="form-name" name="nombre"
+                   data-i18n-placeholder="contact.name_ph" placeholder="Rafael García" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-email" data-i18n="contact.email_label">Email</label>
+            <input class="form-input" type="email" id="form-email" name="email"
+                   data-i18n-placeholder="contact.email_ph" placeholder="hello@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="form-msg" data-i18n="contact.msg_label">Message</label>
+          <textarea class="form-input" id="form-msg" name="mensaje" rows="5"
+                    data-i18n-placeholder="contact.msg_ph"
+                    placeholder="Tell me about your project…" required></textarea>
+        </div>
+
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send Message</button>
+
+        <div class="form-success" id="form-success" data-i18n="contact.success">
+          ✓  Message sent — I will get back to you soon!
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Rafa</span>
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Rafael Orozco Morán · Built with ♥ in Córdoba</span>
+    <div class="footer-socials">
+      <a href="https://github.com/ROrozcoM" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://twitter.com/rafozco20" target="_blank" rel="noopener" aria-label="Twitter">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>

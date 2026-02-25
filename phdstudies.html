@@ -1,90 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZVRWG83ZDM');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-    <title>Rafael Orozco</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- Incluir la biblioteca Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
- 
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVRWG83ZDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZVRWG83ZDM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rafael Orozco — PhD Studies on precision irrigation in fruit trees.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>PhD Studies — Rafael Orozco</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="index.html">Rafa</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    
-                    <li><a href="index.html" onclick="seleccionar()"><-- Back</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    </div>
 
-    </section>
-
-   <!-- SECCION PROYECTOS -->
-   <section id="proyectos" class="proyectos">
-    <div class="contenido-seccion">
-      <h2>PhD Studies</h2>
-      <div class="card-container">
-        <div class="card">
-            <div class="card-image">
-              <img src="img/tesis.jpg" alt="Norway">
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3>PhD Thesis Single Project</h3>
-                <span class="badge_on">Active</span>
-              </div>
-              <p>My doctoral thesis is developed in the field of irrigation optimization in fruit trees by detection of the variability of behavior of fruit trees in the face of hydric stress...</p>
-              <a href="https://agrophenolab.csic.es/about/directorio/rafael-orozco-moran/" class="card-button">Learn more</a>
-            </div>
-          </div>
+<!-- NAV -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Rafa</a>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a href="index.html#skills"      data-i18n="nav.skills">Skills</a></li>
+        <li><a href="index.html#background"  data-i18n="nav.background">Background</a></li>
+        <li><a href="index.html#projects"    data-i18n="nav.projects">Projects</a></li>
+        <li><a href="ownprojects.html"        data-i18n="nav.development">Development</a></li>
+        <li><a href="awards.html"             data-i18n="nav.awards">Awards</a></li>
+        <li><a href="publications.html"       data-i18n="nav.publications">Publications</a></li>
+        <li><a href="index.html#contact"     data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </section>
-      
-    
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ROrozcoM"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/rafozco20"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#skills"     data-i18n="nav.skills">Skills</a>
+  <a href="index.html#background" data-i18n="nav.background">Background</a>
+  <a href="index.html#projects"   data-i18n="nav.projects">Projects</a>
+  <a href="ownprojects.html"       data-i18n="nav.development">Development</a>
+  <a href="awards.html"            data-i18n="nav.awards">Awards</a>
+  <a href="publications.html"      data-i18n="nav.publications">Publications</a>
+  <a href="index.html#contact"    data-i18n="nav.contact">Contact</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="subpage-header">
+  <div class="container">
+    <a href="index.html" class="subpage-back" data-i18n="phd.back">← Back to home</a>
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text" data-i18n="phd.eyebrow">Research</span>
+    </div>
+    <h1 class="subpage-title" data-i18n="phd.title">PhD Studies</h1>
+    <p class="subpage-subtitle" data-i18n="phd.subtitle">Doctoral research at IAS-CSIC &amp; UCO on precision irrigation in fruit trees.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+    <img src="img/tesis.jpg" alt="PhD Research — Almond orchard field work" class="phd-hero-img reveal">
+
+    <div class="phd-body">
+      <!-- Main text -->
+      <div class="phd-text reveal">
+        <p>My doctoral thesis is developed in the field of <strong>irrigation optimization in fruit trees</strong>, specifically investigating the detection of the variability of behavior of fruit trees in the face of hydric stress. The research is carried out at the <strong>AgroPhenoLab</strong> — Institute of Sustainable Agriculture (IAS-CSIC) in collaboration with the University of Córdoba (UCO).</p>
+
+        <p>The core challenge I address is that almond orchards — and fruit trees in general — do not respond uniformly to irrigation. There is significant <strong>intra-plot variability</strong> driven by differences in canopy size, soil heterogeneity, and root distribution. Standard irrigation scheduling based on average field values fails to account for this variability, leading to either water waste or stress-induced yield loss.</p>
+
+        <p>My approach combines <strong>aerial and terrestrial LiDAR</strong> for precise canopy characterization, <strong>UAV-mounted thermal cameras</strong> (calibrated using the PyRADTEMCam methodology) for water stress detection, and <strong>IoT sensor networks</strong> for continuous micro-meteorological monitoring. These data streams feed into models that can predict and prescribe irrigation at the individual-tree level.</p>
+
+        <p>The research builds directly on the STIMA2 project (Single Tree Irrigation Management Algorithms for Almonds), which demonstrated that matching irrigation to actual evapotranspiration — accounting for individual tree canopy area — can maximize yield and minimize water input simultaneously.</p>
+
+        <p>The thesis is expected to contribute novel frameworks for <strong>precision irrigation at the single-tree scale</strong>, with applications to olive, citrus, and other woody crops beyond almond.</p>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="phd-sidebar reveal reveal-delay-1">
+        <div class="phd-sidebar-card">
+          <div class="phd-sidebar-label" data-i18n="phd.inst">Institution</div>
+          <div class="phd-sidebar-value">IAS-CSIC · UCO<br><small style="color:var(--t2)">AgroPhenoLab, Córdoba</small></div>
         </div>
-    </footer>
+        <div class="phd-sidebar-card">
+          <div class="phd-sidebar-label" data-i18n="phd.period">Period</div>
+          <div class="phd-sidebar-value">2023 — Present</div>
+        </div>
+        <div class="phd-sidebar-card">
+          <div class="phd-sidebar-label" data-i18n="phd.status">Status</div>
+          <div class="phd-sidebar-value">
+            <span class="tag tag-green" data-i18n="phd.active">Active</span>
+          </div>
+        </div>
+        <div class="phd-sidebar-card">
+          <div class="phd-sidebar-label" data-i18n="phd.topic">Research Topic</div>
+          <div class="phd-sidebar-value">Precision irrigation · LiDAR · UAV Thermography · IoT · Hydric stress</div>
+        </div>
+        <a href="https://agrophenolab.csic.es/about/directorio/rafael-orozco-moran/" class="btn btn-outline" target="_blank" rel="noopener" style="width:100%;justify-content:center;" data-i18n="phd.link">AgroPhenoLab profile →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
-     <!-- Incluir la biblioteca jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- Incluir la biblioteca Slick Carousel JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
- 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Rafa</span>
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Rafael Orozco Morán · Built with ♥ in Córdoba</span>
+    <div class="footer-socials">
+      <a href="https://github.com/ROrozcoM" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rafael-orozco-mor%C3%A1n-882014177/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/rafozco20" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
 
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
